@@ -1,0 +1,3 @@
+C:/Users/kealancrilly/CLionProjects/CA2-PPM/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/kealancrilly/CLionProjects/CA2-PPM/cmake-build-debug/CMakeFiles/CA2_PPM.dir
+C:/Users/kealancrilly/CLionProjects/CA2-PPM/cmake-build-debug/CMakeFiles/edit_cache.dir

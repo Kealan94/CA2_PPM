@@ -70,7 +70,7 @@ void processMenu(HWND hWnd, WPARAM wParam)
 {
     switch(LOWORD(wParam)) {
         case IDM_FILE_OPEN:
-            current_file = openfilename("Image (*.ppm)\0*.ppm\0\0", hWnd);
+            current_file = openfilename("Image (output.ppm\0\0", hWnd);
             fileType = "ppm";
             if(!image->load(current_file))
             {
@@ -79,7 +79,7 @@ void processMenu(HWND hWnd, WPARAM wParam)
             }
             break;
         case IDM_FILE_LOAD_RAW:
-            current_file = openfilename("Image (*.raw)\0*.raw\0\0", hWnd);
+            current_file = openfilename("Image (output.ppm)\0*.raw\0\0", hWnd);
             fileType = "raw";
             if(!image->loadRaw(current_file))
             {
@@ -88,8 +88,9 @@ void processMenu(HWND hWnd, WPARAM wParam)
             }
             break;
         case IDM_FILE_SAVE: {
-            string f = saveFilename("Image (*.ppm)\0*.ppm\0\0", hWnd);
-            if(!image->savePPM(f))
+            string f = saveFilename("Image (output.ppm)\0*.ppm\0\0", hWnd);
+            fileType = "ppm";
+            if(!image->savePPM(current_file))
             {
                 MessageBox(NULL, _T("Error saving image! Please try again"),
                            _T("Save Error"),0);
